@@ -3,23 +3,19 @@ from moviepy.editor import VideoFileClip, concatenate_videoclips
 
 # This is perfect for my use case
 
-# Join multiple videos into one
-# Example:
-# video-1.mp4
-# video-2.mp4
-# video-3.mp4
+# Join multiple videos in defferent folders into one
 
 FIXED_W = 1920
 FIXED_h = 1080
-OUTPUT_FNAME = 'merged_cat01.mp4'
+OUTPUT_FNAME = 'mgr.mp4'
 FOLDERS = []
-FOLDERS = FOLDERS + "../../Youtube/xxxx/@cat/"
-FOLDERS = FOLDERS + "../../Youtube/xxxxx/@cat/"
+FOLDERS.append("../../Youtube/@xxx/@cat/")
+FOLDERS.append("../../Youtube/@xxxx/@cat/")
 
 def merge_videos():
   videos = []
   file_list = []
-  for f in file_list:
+  for f in FOLDERS:
     file_list = file_list + get_files(f)
 
   for item in file_list:
