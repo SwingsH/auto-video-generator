@@ -39,7 +39,6 @@ def merge_videos():
     print(clip.size)
     videos.append( clip )
 
-  #videos.append(VideoFileClip('../../Youtube/@cutestanimalsbaby/01/01-Scene-001.mp4'))
   final_video = concatenate_videoclips(videos)
   final_video.write_videofile(OUTPUT_FNAME, audio_codec='aac')
 
