@@ -7,10 +7,24 @@ from moviepy.editor import VideoFileClip, concatenate_videoclips
 
 FIXED_W = 1920
 FIXED_h = 1080
-OUTPUT_FNAME = 'mgr.mp4'
+
+
+OUTPUT_FNAME = '0101_cat_2023-06-27.mp4'
 FOLDERS = []
-FOLDERS.append("../../Youtube/@xxx/@cat/")
-FOLDERS.append("../../Youtube/@xxxx/@cat/")
+FOLDERS.append("../../Youtube/@cutetv7/@cat/")
+FOLDERS.append("../../Youtube/@cutestanimalsbaby/@cat/")
+
+"""
+OUTPUT_FNAME = '0201_dog_2023-06-27.mp4'
+FOLDERS = []
+FOLDERS.append("../../Youtube/@cutetv7/@dog/")
+"""
+
+"""
+OUTPUT_FNAME = '0202_dog_2023-06-27.mp4'
+FOLDERS = []
+FOLDERS.append("../../Youtube/@cutestanimalsbaby/@dog/")
+"""
 
 def merge_videos():
   videos = []
@@ -39,6 +53,7 @@ def merge_videos():
     print(clip.size)
     videos.append( clip )
 
+  #videos.append(VideoFileClip('../../Youtube/@cutestanimalsbaby/01/01-Scene-001.mp4'))
   final_video = concatenate_videoclips(videos)
   final_video.write_videofile(OUTPUT_FNAME, audio_codec='aac')
 
