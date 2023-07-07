@@ -14,7 +14,7 @@ def trim():
     clip = VideoFileClip( item )
     print(clip.duration )
     clip.close()
-    if clip.duration < 2000.0 :
+    if clip.duration < 4.5 :
       shutil.move(item, FOLDER_TOO_SHORT + os.path.basename(item) )
     videos.append( clip )
 
